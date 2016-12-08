@@ -40,7 +40,7 @@ const weather = (ipData) => {
     const weather = wImg[wData.weather[0].main];
 
     document.querySelector('.h2--temp').innerHTML =
-      Math.ceil(wData.main.temp) + ' °F';
+      Math.round(wData.main.temp) + ' °F';
     document.querySelector('body').style.background = 
       `url(${weather[1]}) no-repeat center center fixed`; 
     document.querySelector('body').style.backgroundSize = "cover";

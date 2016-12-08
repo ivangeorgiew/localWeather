@@ -13,12 +13,12 @@ const getJSON = (url, cb) =>{
   xhr.send();
 };
 
-const locat = (ipData) => {
+const getLocation = (ipData) => {
   document.querySelector('.h2--city').innerHTML = ipData.city;
   document.querySelector('.h2--country').innerHTML = ipData.country;
 };
 
-const weather = (ipData) => {
+const getWeather = (ipData) => {
   getJSON(
     'http://api.openweathermap.org/data/2.5/weather?lat=' +
     ipData.loc.split(',')[0] + '&lon=' + 
@@ -37,14 +37,14 @@ const weather = (ipData) => {
       "Atmosphere":["wi-fog", "/assets/img/fog.jpg"],
       "Clear": ["wi-day-windy", "/assets/img/clearsky.jpg"]
     };
-    const weather = wImg[wData.weather[0].main];
+    const wVar = wImg[wData.weather[0].main];
 
     document.querySelector('.h2--temp').innerHTML =
       Math.round(wData.main.temp) + ' °F';
     document.querySelector('body').style.background = 
-      `url(${weather[1]}) no-repeat center center fixed`; 
+      `url(${wVar[1]}) no-repeat center center fixed`; 
     document.querySelector('body').style.backgroundSize = "cover";
-    document.querySelector('.wi').classList.add(weather[0]);
+    document.querySelector('.wi').classList.add(wVar[0]);
   });
 };
 
@@ -65,8 +65,8 @@ const convert = () => {
 
 
 getJSON('http://ipinfo.io/?callback', (ipData) => {
-  locat(ipData);
-  weather(ipData);
+  getLocation(ipData);
+  getWeather(ipData);
 });
 
 document.querySelector('.b--convert').onclick = () => {

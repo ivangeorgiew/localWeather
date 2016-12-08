@@ -1,19 +1,46 @@
 @import 'node_modules/node-normalize-scss/_normalize.scss';
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
+@import 'weather-icons.min.scss';
 
 *{
-  border-radius: 5px;
   box-sizing: border-box;
-}
-
-html, body{
-  background-color: yellow;
   font-family: 'Open Sans', sans-serif;
   margin: 0px;
   padding: 0px;
+}
+
+html, body{
   text-align: center;
 }
   
 select, input, button{
   border-width: 0px;
+}
+
+.wi{
+  font-size: 180px;
+  margin-top: 60px;
+}
+
+.h2--city{
+  font-size: 70px;
+  margin: 40px auto;
+}
+
+.h2--country{
+  font-size: 50px;
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
+
+.h2--temp {
+  font-size: 50px;
+}
+
+.b--convert{
+  font-size: 30px;
+  background-color: #FF4136;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
 }

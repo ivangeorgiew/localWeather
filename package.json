@@ -1,13 +1,13 @@
 {
-  "name": "static-boilerplate",
+  "name": "localWeather",
   "version": "1.0.0",
-  "description": "A boilerplate for the creation of static websites",
+  "description": "An app that shows the weather in your city",
   "main": "gulpfile.js",
   "author": "Ivan Georgiev",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ivangeorgiew/static-boilerplate.git"
+    "url": "https://github.com/ivangeorgiew/localWeather.git"
   },
   "devDependencies": {
     "babel-preset-latest": "^6.16.0",

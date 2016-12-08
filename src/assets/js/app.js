@@ -27,15 +27,15 @@ const getWeather = (ipData) => {
        (wData) => {
 
     const wImg = {
-      "Clouds": ["wi-cloudy", "/assets/img/clouds.jpg"],
-      "Extreme": ["wi-tornado", "/assets/img/tornado.jpg"],
-      "Additional": ["wi-na", "/assets/img/clearsky.jpg"],
-      "Thunderstorm": ["wi-lightning", "/assets/img/thunderstorm.jpg"],
-      "Drizzle": ["wi-showers", "/assets/img/rain.jpg"],
-      "Rain": ["wi-rain", "/assets/img/rain.jpg"],
-      "Snow": ["wi-snow", "/assets/img/snow.jpg"],
-      "Atmosphere":["wi-fog", "/assets/img/fog.jpg"],
-      "Clear": ["wi-day-windy", "/assets/img/clearsky.jpg"]
+      "Clouds": ["wi-cloudy", "assets/img/clouds.jpg"],
+      "Extreme": ["wi-tornado", "assets/img/tornado.jpg"],
+      "Additional": ["wi-na", "assets/img/clearsky.jpg"],
+      "Thunderstorm": ["wi-lightning", "assets/img/thunderstorm.jpg"],
+      "Drizzle": ["wi-showers", "assets/img/rain.jpg"],
+      "Rain": ["wi-rain", "assets/img/rain.jpg"],
+      "Snow": ["wi-snow", "assets/img/snow.jpg"],
+      "Atmosphere":["wi-fog", "assets/img/fog.jpg"],
+      "Clear": ["wi-day-windy", "assets/img/clearsky.jpg"]
     };
     const wVar = wImg[wData.weather[0].main];
 
